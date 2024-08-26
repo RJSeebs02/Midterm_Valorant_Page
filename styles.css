@@ -1,9 +1,11 @@
+ 
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
+    cursor: url('img/logo.png'), auto;
 }
 h1, h2, h3, h4, p{
     margin: 0;
@@ -121,6 +123,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-top: 60px;
     margin-left: 270px;
     margin-right: 270px;
 }
@@ -141,4 +144,218 @@ nav ul li a:hover {
     height: auto;
     mask-image:
     linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+}
+#gameplay{
+    height: 950px;
+    width: 100%;
+    background-color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+#gameplay h1{
+    padding-top: 100px;
+    padding-left: 160px;
+    font-family: 'Anton', sans-serif;
+    color: #1B1A21;
+    font-size: 80px;
+    animation: animateGameplayTitle 1.5s;
+}
+#gameplay .wrapper{
+    margin-top: 60px;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+#gameplay .wrapper #swiper-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#gameplay .wrapper #swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #FF4655;
+}
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #FF4655;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+#gameplay .wrapper #swiper-wrapper img{
+    width: 600px;
+    height: 400px;
+    border-color: #1B1A21;
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 200px;
+}
+
+#gameplay .wrapper #text-wrapper h2{
+    color: #1B1A21;
+    padding-top: 20px;
+    margin: 10px;
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+}
+#gameplay .wrapper #text-wrapper p{
+    color: #1B1A21;
+    margin: 10px;
+    font-family: 'Alef', sans-serif;
+    font-size: 20px;
+}
+#agents{
+    height: 950px;
+    width: 100%;
+    background-color: #1B1A21;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+#agents h1{
+    padding-top: 100px;
+    padding-left: 160px;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 80px;
+    animation: animateGameplayTitle 1.5s;
+}
+#agents .wrapper{
+    margin-top: 60px;
+    margin-left: 270px;
+    margin-right: 270px;
+}
+#weapons{
+    height: 950px;
+    width: 100%;
+    background-color: #FF4655;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+#weapons h1{
+    padding-top: 100px;
+    padding-left: 160px;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 80px;
+    animation: animateGameplayTitle 1.5s;
+}
+#weapons .wrapper{
+    margin-top: 60px;
+    margin-left: 270px;
+    margin-right: 270px;
+    display: flex;
+}
+#weapons ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#weapons ul li {
+    margin-left: 30px;
+}
+#weapons ul li button {
+    text-decoration: none;
+    color: #1B1A21;
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+#weapons ul li button {
+    background: none;
+    border: none;
+    color: #1B1A21;
+    font-weight: bold;
+}
+#weapons ul li button:hover {
+    color: white;
+}
+#weapons #weapons-wrapper{
+    margin-left: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 550px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure the container's children align to the start */
+    align-items: center;
+}
+#weapons #weapons-wrapper h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 60px;
+    color: white;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+#weapons #weapons-wrapper #swiper-wrapper{
+    display: flex;
+}
+#weapons #weapons-wrapper #swiper-wrapper button {
+    text-decoration: none;
+    width: 40px;
+    color: #1B1A21;
+    font-family: 'Anton', sans-serif;
+    font-size: 120px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+}
+#weapons #weapons-wrapper #swiper-wrapper button:hover {
+    color: white;
 }
