@@ -307,50 +307,40 @@ nav ul li a:hover {
     margin-left: 270px;
     margin-right: 270px;
 }
-#agents #agents-wrapper{
-    margin-left: 500px;
-    margin-right: 500px;
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 700px;
-    width: 800px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-}
-#agents #agents-wrapper h3{
-    font-family: 'Anton', sans-serif;
-    font-size: 60px;
+#agents .wrapper #text-wrapper{
     color: white;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 5px;
+    margin: 10px;
+    font-family: 'Alef', sans-serif;
+    font-size: 20px;
 }
-#agents #agents-wrapper #swiper-wrapper{
+#agents .wrapper #cards-wrapper {
+    padding: 20px;
+    background-color: red;
     display: flex;
+    justify-content: center;
 }
-#agents #agents-wrapper #swiper-wrapper button {
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40px;
-    color: white;
-    font-family: 'Anton', sans-serif;
-    font-size: 120px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    background: none;
-    border: none;
+
+#agents .wrapper #cards-wrapper #card_agent{
+    width: 350px;
+    background-color: blue;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+    margin-left: 10px;
+    margin-right: 10px;
 }
-#agents #agents-wrapper #swiper-wrapper button:hover {
-    color:#1B1A21
+#agents .wrapper #cards-wrapper #card_agent #container{
+    padding: 20px;
 }
-#agents #agents-wrapper #swiper-wrapper img{
-    width: 300px;
-    height: 590px;
-    padding-left: 200px;
-    padding-right: 200px;
+#agents .wrapper #cards-wrapper #card_agent #container img{
+    height: 200px;
 }
+
+
+
+
+
+
+
 #weapons{
     height: 1200px;
     width: 100%;
