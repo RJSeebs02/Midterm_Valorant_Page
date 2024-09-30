@@ -109,7 +109,7 @@ nav ul li a:hover {
     border-color: #1B1A21;
 }
 #overview {
-    height: 950px;
+    height: 750px;
     width: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('img/omen.gif');
     background-size: cover;
@@ -123,8 +123,17 @@ nav ul li a:hover {
     font-family: 'Anton', sans-serif;
     color: white;
     font-size: 80px;
-    animation: animateGameplayTitle 1.5s;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
+
+.active {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transform: translateY(0) !important;
+}
+
 @keyframes animateGameplayTitle {
     0% {opacity:0; padding-left:260px;}
     100% {opacity: 1; padding-left:160px}
@@ -139,6 +148,9 @@ nav ul li a:hover {
 }
 #overview .wrapper #text-wrapper{
     width: 40%;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #overview .wrapper #text-wrapper p{
     color: white;
@@ -147,11 +159,14 @@ nav ul li a:hover {
     font-size: 20px;
 }
 #overview .wrapper #img-wrapper{
-    width: 60%;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.6s ease-in-out;
 }
+
 #overview .wrapper #img-wrapper img {
-    width: 100%;
-    height: auto;
+    width: 690px;
+    height: 320px;
     mask-image:
     linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
 }
@@ -167,23 +182,49 @@ nav ul li a:hover {
 }
 
 
+
 #gameplay{
-    height: 950px;
+    height: 970px;
     width: 100%;
-    background-color: #FFFFFF;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: linear-gradient(-45deg, #ffffff, #9ec5ff, #ffffff, #9ec5ff);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     position: relative;
 }
+html, body {
+    width: 100%;
+    height:100%;
+  }
+  
+  body {
+      background: linear-gradient(-45deg, #ffffff, #9ec5ff, #ffffff, #9ec5ff);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
 #gameplay h1{
     padding-top: 100px;
     padding-left: 160px;
     font-family: 'Anton', sans-serif;
     color: #1B1A21;
     font-size: 80px;
-    animation: animateGameplayTitle 1.5s;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
+
 #gameplay #text-wrapper span {
     display: inline-block;
     transition: transform 0.1s ease, color 0.1s ease;
@@ -202,6 +243,9 @@ nav ul li a:hover {
     width: 100%;
     height: 400px;
     position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.6s ease-in-out;
 }
 
 #gameplay .wrapper #swiper-wrapper {
@@ -278,12 +322,19 @@ nav ul li a:hover {
     margin: 10px;
     font-family: 'Anton', sans-serif;
     font-size: 40px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
+
 #gameplay .wrapper #text-wrapper p{
     color: #1B1A21;
     margin: 10px;
     font-family: 'Alef', sans-serif;
     font-size: 20px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #agents{
     height: 1650px;
@@ -300,7 +351,9 @@ nav ul li a:hover {
     font-family: 'Anton', sans-serif;
     color: white;
     font-size: 80px;
-    animation: animateGameplayTitle 1.5s;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #agents .wrapper{
     margin-top: 60px;
@@ -312,14 +365,22 @@ nav ul li a:hover {
     margin: 10px;
     font-family: 'Alef', sans-serif;
     font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #agents .wrapper #cards-wrapper {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.6s ease-in-out;
 }
 
 #agents .wrapper #cards-wrapper #card_agent{
+    position: relative;
     width: 350px;
     height: 530px;
     background-color: rgba(0, 0, 0, 0.815);
@@ -328,6 +389,7 @@ nav ul li a:hover {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 40px;
+    transition: .5s ease;
 }
 #agents .wrapper #cards-wrapper #card_agent #container{
     padding: 20px;
@@ -336,12 +398,44 @@ nav ul li a:hover {
     color: white;
     font-size: 40px;
     font-family: 'Anton', sans-serif;
+    transition: .5s ease;
 }
 #agents .wrapper #cards-wrapper #card_agent #container img{
     height: 430px;
     margin: auto;
+    transition: .5s ease;
 }
-
+#agents .wrapper #cards-wrapper #card_agent #container .card_content {
+    transition: .5s ease;
+    opacity: 0;
+    background-color: #FF4655;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 90;
+}
+#agents .wrapper #cards-wrapper #card_agent #container .card_content h4 {
+    color: black;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+  }
+#agents .wrapper #cards-wrapper #card_agent:hover{
+    background-color: white;
+}
+#agents .wrapper #cards-wrapper #card_agent:hover #container h3{
+    color: #1B1A21;
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+}
+#agents .wrapper #cards-wrapper #card_agent:hover #container .card_content {
+    opacity: 1;
+}
+#agents .wrapper #cards-wrapper #card_agent:hover img {
+    opacity: 1;
+}
 
 
 
@@ -363,7 +457,9 @@ nav ul li a:hover {
     font-family: 'Anton', sans-serif;
     color: white;
     font-size: 80px;
-    animation: animateGameplayTitle 1.5s;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #weapons .wrapper{
     margin-top: 60px;
@@ -379,12 +475,18 @@ nav ul li a:hover {
     margin: 10px;
     font-family: 'Anton', sans-serif;
     font-size: 40px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #weapons .wrapper #text-wrapper p{
     color: white;
     margin: 10px;
     font-family: 'Alef', sans-serif;
     font-size: 20px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
 }
 #options-wrapper{
     margin-top: 40px;
@@ -410,6 +512,9 @@ nav ul li a:hover {
     background: none;
     border: none;
     font-weight: bold;
+}
+#weapons #options-wrapper ul li button.active {
+    color: #FF4655; /* Change to the desired active color */
 }
 #weapons #options-wrapper ul li button {
     background: none;
@@ -456,11 +561,12 @@ nav ul li a:hover {
 }
 #weapons #weapons-wrapper #swiper-wrapper #weapon-button {
     position: relative;
+    z-index: 10;
 }
 #weapons #weapons-wrapper #swiper-wrapper #weapon-button button {
     width: auto;
     color: #ffffff;
-    cursor: pointer;
+    cursor: crosshair;
     transition: color 0.3s ease;
     background: none;
 }
@@ -469,19 +575,37 @@ nav ul li a:hover {
 }
 
 /* Weapon image rotation animation */
-#weapons #weapons-wrapper #swiper-wrapper #weapon-button #weapon-img {
-    transition: transform 0.3s; /* Smooth transition for rotation */
-    position: relative;
-}
-#weapons #weapons-wrapper #swiper-wrapper #weapon-button #weapon-img-firing {
-    animation: firingAnimation 0.2s infinite; /* Animation for a blinking effect */
-    transform: rotate(10deg); /* Example: Slightly enlarge the image */
+#weapons #weapons-wrapper #swiper-wrapper #weapon-button #new-weapon-img {
+    width: 200px; 
+    position: absolute;
+    top: -40px; 
+    left: -160px; 
+    display: none; /* Initially hidden */
+    z-index: 2; 
 }
 
+.firing {
+    animation: firingAnimation 0.2s infinite alternate; 
+    transform: rotate(10deg); /* Add rotation as part of the firing */
+    z-index: 1;
+}
 @keyframes firingAnimation {
     0% { opacity: 1; }
     50% { opacity: 0.5; }
     100% { opacity: 1; }
+}
+
+#weapons #weapons-wrapper #swiper-wrapper #weapon-button #weapon-img.rotate {
+    transform: rotate(10deg); /* Full 360-degree rotation */
+    z-index: 10;
+}
+
+#weapons #weapons-wrapper #swiper-wrapper #weapon-button #new-weapon-img {
+    width: 200px; /* Adjust size as needed */
+    position: absolute;
+    top: -40px; /* Align top with the first image */
+    left: -160px; /* Positioned left of the weapon image (adjust based on size of both images) */
+    display: none; /* Initially hidden */
 }
 
 #weapons #weapons-wrapper #swiper-wrapper #weapon-button #weapon-img.rotate {
@@ -565,4 +689,238 @@ nav ul li a:hover {
     font-family: 'Anton', sans-serif;
     font-size: 30px;
     margin-left: 40px;
+}
+
+#gameplay .animate {
+    transform: translateX(-50%);
+}
+
+#extra-banner {
+    height: 700px;
+    width: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url('img/valo_banner2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+#extra-banner .wrapper{
+    margin-top: auto;
+    margin-left: 180px;
+    margin-right: 270px;
+}
+#extra-banner .wrapper #text-wrapper{
+    width: 40%;
+}
+#extra-banner .wrapper #text-wrapper h1{
+    font-family: 'Anton', sans-serif;
+    padding-top: 20px;
+    padding-left: 80px;
+    color: rgb(24, 23, 23);
+    font-size: 120px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper h2{
+    font-family: 'Anton', sans-serif;
+    margin-top: 1px;
+    padding-left: 85px;
+    padding-bottom: 10px;
+    color: rgb(24, 23, 23);
+    font-size: 60px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper h3{
+    font-family: 'Anton', sans-serif;
+    margin-top: 1px;
+    padding-left: 85px;
+    color: rgb(24, 23, 23);
+    font-size: 40px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper #skill-1{
+    font-family: 'Anton', sans-serif;
+    padding-top: 20px;
+    padding-left: 85px;
+    color: rgb(24, 23, 23);
+    font-size: 30px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper #skill-1 img{
+    width: 40px;
+    height: auto;
+    margin-left: 15px;
+}
+#extra-banner .wrapper #text-wrapper #skill-2{
+    font-family: 'Anton', sans-serif;
+    padding-top: 20px;
+    padding-left: 85px;
+    color: rgb(24, 23, 23);
+    font-size: 30px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper #skill-2 img{
+    width: 40px;
+    height: auto;
+    margin-left: 15px;
+}
+#extra-banner .wrapper #text-wrapper #skill-3{
+    font-family: 'Anton', sans-serif;
+    padding-top: 20px;
+    padding-left: 85px;
+    color: rgb(24, 23, 23);
+    font-size: 30px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper #skill-3 img{
+    width: 40px;
+    height: auto;
+    margin-left: 40px;
+}
+#extra-banner .wrapper #text-wrapper #skill-4{
+    font-family: 'Anton', sans-serif;
+    padding-top: 20px;
+    padding-left: 85px;
+    color: rgb(24, 23, 23);
+    font-size: 30px;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease-in-out;
+}
+#extra-banner .wrapper #text-wrapper #skill-4 img{
+    width: 40px;
+    height: auto;
+    margin-left: 45px;
+}
+#extra-banner .wrapper #img-wrapper{
+    width: auto;
+    margin-left: 10px;
+}
+#extra-banner .wrapper #img-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    mask-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 60%);
+}
+#footer{
+    height: 200px;
+    width: 100%;
+    background-color: #121114;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+#footer h1{
+    text-align: center;
+    color: white; /* Optional styling */
+    padding: 40px 0; /* Adjust for vertical spacing */
+    font-family: 'Alef', sans-serif;
+    font-size: 20px;
+}
+#footer h2{
+    text-align: center;
+    color: white; /* Optional styling */
+    padding: 10px 0; /* Adjust for vertical spacing */
+    font-family: 'Alef', sans-serif;
+    font-size: 15px;
+}
+
+@media (max-width: 1200px){
+    #home h1{
+        font-size: 90px;
+    }
+    #home a{
+        margin-left: 20px;
+    }
+    #home button{
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    .play {
+    font-size: 2px;
+    margin-left: 80px;
+    margin-right: 0;
+    top: 85%;
+    background-color: #FF4655;
+    color: white;
+    border-color: white;
+    border-width: 2px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 50px;
+    transition: color 1s ease, background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    #overview h1{
+        padding-left: 70px;
+        font-size: 40px;
+    }
+    #overview .wrapper{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    #overview .wrapper #img-wrapper img {
+        width: 520px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 1524px){
+
+    #overview h1{
+        padding-left: 70px;
+        font-size: 40px;
+    }
+    #overview .wrapper{
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    #overview .wrapper #img-wrapper img {
+        width: 520px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 955px){
+
+    #overview .wrapper{
+        margin-left: 70px;
+        margin-right: 70px;
+        display: flex; /* Enables flexbox */
+        flex-direction: column; /* Arranges elements in a column */
+        
+    }
+    #overview .wrapper #text-wrapper{
+        width: 100%;
+    }
+    #overview .wrapper #text-wrapper p{
+        font-size: 15px;
+    }
+    #overview .wrapper #img-wrapper {
+        display: flex; /* Enable flexbox */
+        justify-content: center; /* Centers items horizontally */
+        align-items: center; /* Centers items vertically */
+        height: 100%; /* Ensure the height allows vertical centering */
+    }
+    
+    #overview .wrapper #img-wrapper img {
+        width: auto;
+        height: 200px;
+        margin-top: 20px;
+    }
 }

@@ -13,6 +13,202 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+window.addEventListener('scroll', () => {
+    //OVERVIEW
+    let h1_Overview = document.querySelector('#overview h1');
+    let h1_OverviewPosition = h1_Overview.getBoundingClientRect().top;
+
+    let textWrapper_Overview = document.querySelector('#overview .wrapper #text-wrapper');
+    let textWrapper_OverviewPosition = textWrapper_Overview.getBoundingClientRect().top;
+
+    let imgWrapper_Overview = document.querySelector('#overview .wrapper #img-wrapper');
+    let imgWrapper_OverviewPosition = imgWrapper_Overview.getBoundingClientRect().top;
+
+    //GAMEPLAY
+    let h1_Gameplay = document.querySelector('#gameplay h1');
+    let h1_GameplayPosition = h1_Gameplay.getBoundingClientRect().top;
+
+    let swiperContainer_Gameplay = document.querySelector('#gameplay .wrapper #swiper-container');
+    let swiperContainer_GameplayPosition = swiperContainer_Gameplay.getBoundingClientRect().top;
+
+    let h2_Gameplay = document.querySelector('#gameplay .wrapper #text-wrapper h2');
+    let h2_GameplayPosition = h2_Gameplay.getBoundingClientRect().top;
+
+    let p_Gameplay = document.querySelector('#gameplay .wrapper #text-wrapper p');
+    let p_GameplayPosition = p_Gameplay.getBoundingClientRect().top;
+
+    //AGENTS
+    let h1_Agents = document.querySelector('#agents h1');
+    let h1_AgentsPosition = h1_Agents.getBoundingClientRect().top;
+
+    let card_Agents = document.querySelector('#agents .wrapper #cards-wrapper');
+    let card_AgentsPosition = card_Agents.getBoundingClientRect().top;
+
+    let p_Agents = document.querySelector('#agents .wrapper #text-wrapper');
+    let p_AgentsPosition = p_Agents.getBoundingClientRect().top;
+
+    //WEAPONS
+    let h1_Weapons = document.querySelector('#weapons h1');
+    let h1_WeaponsPosition = h1_Weapons.getBoundingClientRect().top;
+
+    let h2_Weapons = document.querySelector('#weapons .wrapper #text-wrapper h2');
+    let h2_WeaponsPosition = h2_Weapons.getBoundingClientRect().top;
+
+    let p_Weapons = document.querySelector('#weapons .wrapper #text-wrapper p');
+    let p_WeaponsPosition = p_Weapons.getBoundingClientRect().top;
+
+    //EXTRA
+    let h1_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper h1');
+    let h1_ExtraPosition = h1_Extra.getBoundingClientRect().top;
+
+    let h2_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper h2');
+    let h2_ExtraPosition = h2_Extra.getBoundingClientRect().top;
+
+    let h3_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper h3');
+    let h3_ExtraPosition = h3_Extra.getBoundingClientRect().top;
+
+    let s1_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper #skill-1');
+    let s1_ExtraPosition = s1_Extra.getBoundingClientRect().top;
+
+    let s2_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper #skill-2');
+    let s2_ExtraPosition = s2_Extra.getBoundingClientRect().top;
+
+    let s3_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper #skill-3');
+    let s3_ExtraPosition = s3_Extra.getBoundingClientRect().top;
+
+    let s4_Extra = document.querySelector('#extra-banner .wrapper #text-wrapper #skill-4');
+    let s4_ExtraPosition = s4_Extra.getBoundingClientRect().top;
+
+    //SCREEN PORTION
+    let screenPosition = window.innerHeight / 1.5;
+    let screenPositionGameplay = window.innerHeight / 1.2;
+
+    //OVERVIEW CLASS
+    if (h1_OverviewPosition < screenPosition) {
+        h1_Overview.classList.add('active');
+    } else {
+        h1_Overview.classList.remove('active');
+    }
+
+    if (textWrapper_OverviewPosition < screenPosition) {
+        textWrapper_Overview.classList.add('active');
+    } else {
+        textWrapper_Overview.classList.remove('active');
+    }
+
+    if (imgWrapper_OverviewPosition < screenPosition) {
+        imgWrapper_Overview.classList.add('active');
+    } else {
+        imgWrapper_Overview.classList.remove('active');
+    }
+
+    //GAMEPLAY CLASS
+    if (h1_GameplayPosition < screenPosition) {
+        h1_Gameplay.classList.add('active');
+    } else {
+        h1_Gameplay.classList.remove('active');
+    }
+
+    if (swiperContainer_GameplayPosition < screenPosition) {
+        swiperContainer_Gameplay.classList.add('active');
+    } else {
+        swiperContainer_Gameplay.classList.remove('active');
+    }
+
+    if (h2_GameplayPosition < screenPositionGameplay) {
+        h2_Gameplay.classList.add('active');
+    } else {
+        h2_Gameplay.classList.remove('active');
+    }
+
+    if (h2_GameplayPosition < screenPositionGameplay) {
+        p_Gameplay.classList.add('active');
+    } else {
+        p_Gameplay.classList.remove('active');
+    }
+
+    //AGENTS CLASS
+    if (h1_AgentsPosition < screenPosition) {
+        h1_Agents.classList.add('active');
+    } else {
+        h1_Agents.classList.remove('active');
+    }
+
+    if (card_AgentsPosition < screenPosition) {
+        card_Agents.classList.add('active');
+    } else {
+        card_Agents.classList.remove('active');
+    }
+
+    if (p_AgentsPosition < screenPosition) {
+        p_Agents.classList.add('active');
+    } else {
+        p_Agents.classList.remove('active');
+    }
+
+    //WEAPONS CLASS
+    if (h1_WeaponsPosition < screenPosition) {
+        h1_Weapons.classList.add('active');
+    } else {
+        h1_Weapons.classList.remove('active');
+    }
+
+    if (h2_WeaponsPosition < screenPosition) {
+        h2_Weapons.classList.add('active');
+    } else {
+        h2_Weapons.classList.remove('active');
+    }
+    if (p_WeaponsPosition < screenPosition) {
+        p_Weapons.classList.add('active');
+    } else {
+        p_Weapons.classList.remove('active');
+    }
+
+    //EXTRA CLASS
+    if (h1_ExtraPosition < screenPosition) {
+        h1_Extra.classList.add('active');
+    } else {
+        h1_Extra.classList.remove('active');
+    }
+
+    if (h2_ExtraPosition < screenPosition) {
+        h2_Extra.classList.add('active');
+    } else {
+        h2_Extra.classList.remove('active');
+    }
+
+    if (h3_ExtraPosition < screenPosition) {
+        h3_Extra.classList.add('active');
+    } else {
+        h3_Extra.classList.remove('active');
+    }
+
+    if (h3_ExtraPosition < screenPosition) {
+        s1_Extra.classList.add('active');
+    } else {
+        s1_Extra.classList.remove('active');
+    }
+
+    if (h3_ExtraPosition < screenPosition) {
+        s2_Extra.classList.add('active');
+    } else {
+        s2_Extra.classList.remove('active');
+    }
+
+    if (s1_ExtraPosition < screenPosition) {
+        s3_Extra.classList.add('active');
+    } else {
+        s3_Extra.classList.remove('active');
+    }
+
+    if (s2_ExtraPosition < screenPosition) {
+        s4_Extra.classList.add('active');
+    } else {
+        s4_Extra.classList.remove('active');
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const weaponImg = document.getElementById('weapon-img');
     const newWeaponImg = document.getElementById('new-weapon-img');
@@ -108,35 +304,32 @@ document.addEventListener('DOMContentLoaded', () => {
             damageWrapper.querySelector('#second-range-wrapper h4:nth-child(4)').textContent = weapon.damage.range2.legs;
     
             // Dynamic margin and padding based on the weapon
-            const swiperContainer = document.querySelector('.swiper-container');
+            const swiperContainer = document.querySelector('#new-weapon-img');
             switch (weaponKey) {
                 case 'sidearms-btn':
-                    swiperContainer.style.margin = '20px';
-                    swiperContainer.style.padding = '10px';
+                    swiperContainer.style.marginTop = '-20px';
+                    swiperContainer.style.marginLeft = '20px';
                     break;
                 case 'smgs-btn':
-                    swiperContainer.style.marginTop = '3000px';
-                    swiperContainer.style.padding = '15px';
+                    swiperContainer.style.marginTop = '-35px';
                     break;
                 case 'shotguns-btn':
-                    swiperContainer.style.margin = '40px';
-                    swiperContainer.style.padding = '20px';
+                    swiperContainer.style.marginTop = '-5px';
                     break;
                 case 'rifles-btn':
-                    swiperContainer.style.margin = '50px';
-                    swiperContainer.style.padding = '25px';
+                    swiperContainer.style.marginTop = '-35px';
                     break;
                 case 'sniper-rifles-btn':
-                    swiperContainer.style.margin = '60px';
-                    swiperContainer.style.padding = '30px';
+                    swiperContainer.style.marginTop = '10px';
+                    swiperContainer.style.marginLeft = '20px';
                     break;
                 case 'machine-guns-btn':
-                    swiperContainer.style.margin = '70px';
-                    swiperContainer.style.padding = '35px';
+                    swiperContainer.style.marginTop = '-23px';
+                    swiperContainer.style.marginLeft = '20px';
                     break;
                 default:
-                    swiperContainer.style.margin = '0px';
-                    swiperContainer.style.padding = '0px';
+                    swiperContainer.style.marginTop = '-20px';
+                    swiperContainer.style.marginLeft = '20px';
                     break;
             }
         }
@@ -145,12 +338,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startFiring() {
         isFiring = true;
+        weaponImg.classList.add('firing'); 
+        newWeaponImg.style.display = 'block';
         currentSound.play();
         weaponImg.classList.add('firing');
         firingInterval = setInterval(() => {
             if (isFiring) {  // Only play if still firing
                 currentSound.currentTime = 0;
                 currentSound.play();
+                newWeaponImg.style.display = 'block';
             }
         }, 200); 
     }
